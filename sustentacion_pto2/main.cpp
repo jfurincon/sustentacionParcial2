@@ -21,8 +21,8 @@ int main(){
     if (opcion == 1){
         adivinaPal juego1;
         palMaquina = juego1.maquinaDes(juego1.listaAnimales);
-        palUsuario = juego1.userDes();
         while(shutdown == 0){
+            palUsuario = juego1.userDes();
             if (juego1.adivinaPalabra(palUsuario, palMaquina) == true){
                 cout << "Felicidades, has adivinado la palabra" << endl;
                 shutdown = 1;

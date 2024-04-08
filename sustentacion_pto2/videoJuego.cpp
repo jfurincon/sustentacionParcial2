@@ -90,18 +90,18 @@ class adivinaNum : public videoJuego{ // subclase de videojuego, juego #2 adivin
     // inicializador de la lista
     void starter(){
         for (int i = 0; i < 20; i++){
-            listaNum.push_back(i)
+            listaNum.push_back(i);
         }; 
     };
 
-    int numMaquina(){
+    int generateNumMaquina(){
         int randomN = rand() % 20; // random entre 0 y 20
         auto it = next(listaNum.begin(), randomN); // iterador que apunta a la palabra escogida
         numMaquina = *it;
         return numMaquina;
-    }
+    };
 
-    int numUsuario(){
+    int generateNumUsuario(){
         cout << "Digita un numero: ";
         cin >> numUsuario;
         return numUsuario;
